@@ -258,7 +258,7 @@ export class GameScene extends Phaser.Scene {
     for (let y = 0; y < MAP_HEIGHT; y++) {
       for (let x = 0; x < MAP_WIDTH; x++) {
         const tile = this.tiles[y][x];
-        let color = COLORS.unexplored;
+        let color: number = COLORS.unexplored;
 
         if (tile.explored) {
           color = tile.type === TileType.Floor ? COLORS.floor : COLORS.wall;

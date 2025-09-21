@@ -31,6 +31,10 @@ export interface Actor extends GameEntity {
   attack: number;
   defense: number;
   level: number;
+  takeDamage(amount: number): void;
+  heal(amount: number): void;
+  isAlive(): boolean;
+  moveTo(newPosition: Position): void;
 }
 
 export interface Item extends GameEntity {
